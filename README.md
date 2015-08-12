@@ -1,7 +1,7 @@
 adriagalin.motd
 =========
 
-[![Build Status](https://travis-ci.org/adriagalin/adriagalin.motd.svg?branch=master)](https://travis-ci.org/adriagalin/adriagalin.motd)
+[![Build Status](https://travis-ci.org/adriagalin/adriagalin.motd.svg?branch=master)](https://travis-ci.org/adriagalin/adriagalin.motd) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-motd-blue.svg)](https://galaxy.ansible.com/list#/roles/4762)
 
 An ansible role for configuring Message Of The Day (motd) file. By default this role add additional information about the distro and the hardware.
 
