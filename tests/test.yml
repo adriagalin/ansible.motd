@@ -1,0 +1,6 @@
+# test file for adriagalin.motd
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - adriagalin.motd
