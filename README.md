@@ -76,7 +76,7 @@ GPLv3 License.
 Author Information
 ------------------
 
-Adrià Galín <www.adriagalin.com>
+[Adrià Galín](www.adriagalin.com)
 
 Inspiration
 ------------------
