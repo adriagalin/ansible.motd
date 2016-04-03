@@ -1,5 +1,5 @@
 adriagalin.motd
-=========
+===============
 
 [![Build Status](https://travis-ci.org/adriagalin/ansible.motd.svg?branch=master)](https://travis-ci.org/adriagalin/ansible.motd) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-motd-blue.svg)](https://galaxy.ansible.com/list#/roles/4779)
 
@@ -10,17 +10,17 @@ Requirements
 
 Tested on:
 
-Ubuntu 14.04 LTS
-RHEL 6.7 Santiago
-RHEL 7.2 Maipo
-CentOS 7.2.1511 Core
+-	Ubuntu 14.04 LTS
+-	RHEL 6.7 Santiago
+-	RHEL 7.2 Maipo
+-	CentOS 7.2.1511 Core
 
 Should work with:
 
-All Ubuntu
-All Debian
-All RHEL
-All Centos
+-	All Ubuntu
+-	All Debian
+-	All RHEL
+-	All Centos
 
 Role Variables
 --------------
@@ -39,6 +39,7 @@ None.
 
 Example Playbook
 ----------------
+
 ```yaml
     - hosts: servers
       roles:
@@ -84,14 +85,14 @@ Author Information
 [Adrià Galín](http://www.adriagalin.com)
 
 Inspiration
-------------------
+-----------
 
 During development, some roles in Ansible Galaxy/Github also inspired me:
 
-  - [michaelrigart](https://github.com/michaelrigart/ansible-role-motd)
-  - [picotrading](https://github.com/picotrading/ansible-motd)
-  - [geerlingguy](https://github.com/geerlingguy/ansible-role-mysql)
-  - [nickjj](https://github.com/nickjj/ansible-locale)
-  - and many others.
+-	[michaelrigart](https://github.com/michaelrigart/ansible-role-motd)
+-	[picotrading](https://github.com/picotrading/ansible-motd)
+-	[geerlingguy](https://github.com/geerlingguy/ansible-role-mysql)
+-	[nickjj](https://github.com/nickjj/ansible-locale)
+-	and many others.
 
-  thank you.
+thank you.
