@@ -11,11 +11,16 @@ Requirements
 Tested on:
 
 Ubuntu 14.04 LTS
+RHEL 6.7 Santiago
+RHEL 7.2 Maipo
+CentOS 7.2.1511 Core
 
 Should work with:
 
 All Ubuntu
 All Debian
+All RHEL
+All Centos
 
 Role Variables
 --------------
