@@ -4,3 +4,7 @@
 1.1.0 26 August 2016 Adria Galin <adriagalin.com>
 - Add ag_motd_add_footer field
 - Add check for 99-footer file
+
+1.1.01 26 August 2016 Adria Galin <adriagalin.com>
+- Add webhook in travis config file
+- Update ansible min version in meta.yml file
