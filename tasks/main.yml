@@ -1,5 +1,20 @@
 ---
 # tasks file for adriagalin.motd
+- name: Add 99-footer file
+  copy: src=99-footer dest=/etc/update-motd.d/99-footer owner=root group=root mode=0755
+  when: ag_motd_add_footer
+  tags: [ 'motd', 'common' ]
+
+- name: Delete 99-footer file
+  file: path=/etc/update-motd.d/99-footer state=absent
+  when: not ag_motd_add_footer
+  tags: [ 'motd', 'common' ]
+
+- name: Delete /etc/motd file
+  file: path=/etc/motd state=absent
+  when: ag_motd_add_footer
+  tags: [ 'motd', 'common' ]
+
 - name: Check motd tail supported
   shell: test -f /etc/update-motd.d/99-footer
   ignore_errors: True

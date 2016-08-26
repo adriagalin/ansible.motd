@@ -1,6 +1,8 @@
 ---
 # defaults file for adriagalin.motd
 
+ag_motd_add_footer: false
+
 ag_motd_sysadmins_signature: Random system administrators
 ag_motd_sysadmins_email: random@random.com
 
