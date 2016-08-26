@@ -11,6 +11,7 @@ Requirements
 Tested on:
 
 -	Ubuntu 14.04 LTS
+-	Ubuntu 16.04 LTS
 -	RHEL 6.7 Santiago
 -	RHEL 7.2 Maipo
 -	CentOS 7.2.1511 Core
@@ -26,6 +27,7 @@ Role Variables
 --------------
 
 ```yaml
+ag_motd_add_footer: false
 ag_motd_sysadmins_signature: set sysadmin team signature
 ag_motd_sysadmins_email: set sysadmin support email
 ag_motd_content: set content of motd
