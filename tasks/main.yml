@@ -23,10 +23,10 @@
 
 - name: Add motd tail
   template: src=etc/motd.j2 dest=/etc/motd.tail
-  when: motd_tail_supported|success
+  when: motd_tail_supported is success
   tags: [ 'motd', 'common' ]
 
 - name: Add motd
   template: src=etc/motd.j2 dest=/etc/motd
-  when: motd_tail_supported|failed
+  when: motd_tail_supported is failed
   tags: [ 'motd', 'common' ]
