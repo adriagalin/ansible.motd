@@ -1,17 +1,26 @@
 ---
 # tasks file for adriagalin.motd
 - name: Add 99-footer file
-  copy: src=99-footer dest=/etc/update-motd.d/99-footer owner=root group=root mode=0755
+  copy:
+    src: 99-footer
+    dest: /etc/update-motd.d/99-footer
+    owner: root
+    group: root
+    mode: 0755
   when: ag_motd_add_footer
   tags: [ 'motd', 'common' ]
 
 - name: Delete 99-footer file
-  file: path=/etc/update-motd.d/99-footer state=absent
+  file:
+    path: /etc/update-motd.d/99-footer
+    state: absent
   when: not ag_motd_add_footer
   tags: [ 'motd', 'common' ]
 
 - name: Delete /etc/motd file
-  file: path=/etc/motd state=absent
+  file:
+    path: /etc/motd
+    state: absent
   when: ag_motd_add_footer
   tags: [ 'motd', 'common' ]
 
@@ -22,11 +31,15 @@
   tags: [ 'motd', 'common' ]
 
 - name: Add motd tail
-  template: src=etc/motd.j2 dest=/etc/motd.tail
-  when: motd_tail_supported|success
+  template:
+    src: etc/motd.j2
+    dest: /etc/motd.tail
+  when: motd_tail_supported is success
   tags: [ 'motd', 'common' ]
 
 - name: Add motd
-  template: src=etc/motd.j2 dest=/etc/motd
-  when: motd_tail_supported|failed
+  template:
+    src: etc/motd.j2
+    dest: /etc/motd
+  when: motd_tail_supported is failed
   tags: [ 'motd', 'common' ]
