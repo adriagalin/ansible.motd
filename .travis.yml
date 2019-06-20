@@ -2,13 +2,13 @@ language: python
 
 python:
   - 2.7
+  - 3.6
 
 sudo: false
 
 env:
   - ANSIBLE_VERSION=latest
-  - ANSIBLE_VERSION=2.0
-  - ANSIBLE_VERSION=1.9.6
+  - ANSIBLE_VERSION=2.4
 
 branches:
   only:
