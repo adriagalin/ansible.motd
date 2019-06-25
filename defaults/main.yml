@@ -26,7 +26,7 @@ ag_motd_content: |
   please contact with your system administrators.
 
   {% for item in ag_motd_info %}
-  {% for key, value in item.iteritems() %}
+  {% for key, value in item.items() | list %}
   {{ key }}{{ value }}
   {% endfor %}
   {% endfor %}
