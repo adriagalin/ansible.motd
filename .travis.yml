@@ -8,7 +8,7 @@ sudo: false
 
 env:
   - ANSIBLE_VERSION=latest
-  - ANSIBLE_VERSION=2.4
+  - ANSIBLE_VERSION=2.5
 
 branches:
   only:
