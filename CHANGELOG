@@ -8,3 +8,8 @@
 1.1.1 26 August 2016 Adria Galin <adriagalin.com>
 - Add webhook in travis config file
 - Update ansible min version in meta.yml file
+
+2.0.0 27 June 2019 Adria Galin <adriagalin.com>
+- Update ansible min version in meta.yml file to 2.5
+- Update ag_motd_content template loop
+- Fix deprecations warnings
