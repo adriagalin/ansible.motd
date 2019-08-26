@@ -7,21 +7,21 @@
     owner: root
     group: root
     mode: 0755
-  when: ag_motd_add_footer
+  when: ag_motd_add_footer | bool
   tags: [ 'motd', 'common' ]
 
 - name: Delete 99-footer file
   file:
     path: /etc/update-motd.d/99-footer
     state: absent
-  when: not ag_motd_add_footer
+  when: not ag_motd_add_footer | bool
   tags: [ 'motd', 'common' ]
 
 - name: Delete /etc/motd file
   file:
     path: /etc/motd
     state: absent
-  when: ag_motd_add_footer
+  when: ag_motd_add_footer | bool
   tags: [ 'motd', 'common' ]
 
 - name: Check motd tail supported
