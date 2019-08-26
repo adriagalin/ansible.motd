@@ -25,8 +25,8 @@
   tags: [ 'motd', 'common' ]
 
 - name: Check motd tail supported
-  shell: test -f /etc/update-motd.d/99-footer
-  ignore_errors: True
+  stat:
+    path: /etc/update-motd.d/99-footer
   register: motd_tail_supported
   tags: [ 'motd', 'common' ]
 
@@ -34,7 +34,7 @@
   template:
     src: etc/motd.j2
     dest: /etc/motd.tail
-  when: motd_tail_supported is success
+  when: motd_tail_supported.stat.exists | bool
   tags: [ 'motd', 'common' ]
 
 - name: Add motd
