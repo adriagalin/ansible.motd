@@ -41,5 +41,5 @@
   template:
     src: etc/motd.j2
     dest: /etc/motd
-  when: motd_tail_supported is failed
+  when: motd_tail_supported.stat.exists | bool == false
   tags: [ 'motd', 'common' ]
