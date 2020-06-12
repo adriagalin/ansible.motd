@@ -7,26 +7,26 @@
     owner: root
     group: root
     mode: 0755
-  when: ag_motd_add_footer
+  when: ag_motd_add_footer | bool
   tags: [ 'motd', 'common' ]
 
 - name: Delete 99-footer file
   file:
     path: /etc/update-motd.d/99-footer
     state: absent
-  when: not ag_motd_add_footer
+  when: not ag_motd_add_footer | bool
   tags: [ 'motd', 'common' ]
 
 - name: Delete /etc/motd file
   file:
     path: /etc/motd
     state: absent
-  when: ag_motd_add_footer
+  when: ag_motd_add_footer | bool
   tags: [ 'motd', 'common' ]
 
 - name: Check motd tail supported
-  shell: test -f /etc/update-motd.d/99-footer
-  ignore_errors: True
+  stat:
+    path: /etc/update-motd.d/99-footer
   register: motd_tail_supported
   tags: [ 'motd', 'common' ]
 
@@ -34,12 +34,12 @@
   template:
     src: etc/motd.j2
     dest: /etc/motd.tail
-  when: motd_tail_supported is success
+  when: motd_tail_supported.stat.exists | bool
   tags: [ 'motd', 'common' ]
 
 - name: Add motd
   template:
     src: etc/motd.j2
     dest: /etc/motd
-  when: motd_tail_supported is failed
+  when: not motd_tail_supported.stat.exists | bool
   tags: [ 'motd', 'common' ]
