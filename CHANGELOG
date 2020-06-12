@@ -13,3 +13,6 @@
 - Update ansible min version in meta.yml file to 2.5
 - Update ag_motd_content template loop
 - Fix deprecations warnings
+
+2.1.0 12 June 2020 Gabriel Suarez <@gabops>
+- Fix idempotency and deprecation warnings. (#10)
