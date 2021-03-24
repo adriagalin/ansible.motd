@@ -1,18 +1,23 @@
-1.0.0 15 August 2015 Adria Galin <adriagalin.com>
-- Initial release
+3.0.0 24 March 2020 Adria Galin <@adriagalin>
+- Fix syntax
+- Update meta galaxy config
+- Change min_ansible_version to 2.9
 
-1.1.0 26 August 2016 Adria Galin <adriagalin.com>
-- Add ag_motd_add_footer field
-- Add check for 99-footer file
-
-1.1.1 26 August 2016 Adria Galin <adriagalin.com>
-- Add webhook in travis config file
-- Update ansible min version in meta.yml file
+2.1.0 12 June 2020 Gabriel Suarez <@gabops>
+- Fix idempotency and deprecation warnings. (#10)
 
 2.0.0 27 June 2019 Adria Galin <adriagalin.com>
 - Update ansible min version in meta.yml file to 2.5
 - Update ag_motd_content template loop
 - Fix deprecations warnings
 
-2.1.0 12 June 2020 Gabriel Suarez <@gabops>
-- Fix idempotency and deprecation warnings. (#10)
+1.1.1 26 August 2016 Adria Galin <adriagalin.com>
+- Add webhook in travis config file
+- Update ansible min version in meta.yml file
+
+1.1.0 26 August 2016 Adria Galin <adriagalin.com>
+- Add ag_motd_add_footer field
+- Add check for 99-footer file
+
+1.0.0 15 August 2015 Adria Galin <adriagalin.com>
+- Initial release
