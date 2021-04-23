@@ -1,4 +1,7 @@
-3.0.0 24 March 2020 Adria Galin <@adriagalin>
+3.1.0 23 April 2021 Adria Galin <@adriagalin>
+- Allows you to add a dynamic message before motd. Like update, date, etc.
+
+3.0.0 24 March 2021 Adria Galin <@adriagalin>
 - Fix syntax
 - Update meta galaxy config
 - Change min_ansible_version to 2.9
