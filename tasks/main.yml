@@ -17,6 +17,21 @@
   when: not ag_motd_add_footer | bool
   tags: ["motd", "common"]
 
+- name: Add dynamic message before motd
+  template:
+    src: etc/update-motd.d/20-update.j2
+    dest: /etc/update-motd.d/20-update
+    mode: a+x
+  when: ag_motd_add_update | bool
+  tags: ["motd", "common"]
+
+- name: Remove dynamic message before motd
+  file:
+    path: /etc/update-motd.d/20-update
+    state: absent
+  when: not ag_motd_add_update | bool
+  tags: ["motd", "common"]
+
 - name: Delete /etc/motd file
   file:
     path: /etc/motd
