@@ -38,3 +38,11 @@ ag_motd_content: |
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   Last ansible run: {{ ansible_date_time.iso8601 }}
+
+ag_motd_add_update: false
+
+ag_motd_update_content: |
+  #!/bin/sh
+  echo
+  echo "uptime is $( uptime )"
+  echo "date   is $( date   )"

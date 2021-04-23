@@ -28,6 +28,8 @@ ag_motd_sysadmins_signature: set sysadmin team signature
 ag_motd_sysadmins_email: set sysadmin support email
 ag_motd_content: set content of motd
 ag_motd_info: additional information to show in message
+ag_motd_add_update: false
+ag_motd_update_content: additional dynamic content before motd
 ```
 
 Dependencies
