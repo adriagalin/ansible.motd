@@ -23,6 +23,8 @@ Role Variables
 --------------
 
 ```yaml
+ag_motd_remove_default_config: false
+ag_motd_restore_default_config: false
 ag_motd_add_footer: false
 ag_motd_sysadmins_signature: set sysadmin team signature
 ag_motd_sysadmins_email: set sysadmin support email

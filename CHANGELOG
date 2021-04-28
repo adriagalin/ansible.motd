@@ -1,3 +1,6 @@
+3.2.0 28 April 2021 Adria Galin <@adriagalin>
+- Add default motd files backup option
+
 3.1.0 23 April 2021 Adria Galin <@adriagalin>
 - Allows you to add a dynamic message before motd. Like update, date, etc.
 
