@@ -45,7 +45,7 @@ Example Playbook
 ```yaml
     - hosts: servers
       roles:
-         - { role: adriagalin.motd }
+         - { role: ansible.motd }
 ```
 
 This playbook produces the /etc/motd file looking like this:
